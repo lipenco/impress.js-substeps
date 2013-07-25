@@ -1,0 +1,9 @@
+.hidden {
+	opacity: 0.1;
+}
+
+.button {
+	size: 20px 20px;
+	background-color: #000;
+}
+

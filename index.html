@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/substeps.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+
+<div class="button prev"></div>
+<div class="button next"></div>
+
+
+<div id="impress">
+
+    <div class="step slide" data-x="1000">
+        <q>slide 1</q>
+        <p class="substep"> 1th substep </p>
+        <p class="substep"> 2nd substep </p>
+        <p class="substep"> 3rd substep </p>
+    </div>
+    
+    <div class="step slide" data-x="2000">
+        <q>slide 2</q>
+    </div>
+
+    <div  class="step slide" data-x="3000">
+        <q>slide 3</q>
+    </div>
+
+   <div  class="step slide" data-x="3000">
+        <q>slide 4</q>
+    </div>
+
+    <div  class="step slide" data-x="4000">
+        <q>slide 5</q>
+    </div>
+
+    
+    
+    <div id="overview" class="step" data-x="1000" data-y="0"  data-scale="5">
+    </div>
+
+</div>
+
+<script src="js/impress-substeps.js"> </script>
+<script src="js/impress.js"> </script>
+<script>  impress().init();</script>
+
+</body>
+</html>
+
+
+
