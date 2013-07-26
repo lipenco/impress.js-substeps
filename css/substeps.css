@@ -2,6 +2,10 @@
 	opacity: 0.1;
 }
 
+.visible {
+	opacity: 1;
+}
+
 body { pointer-events: auto; 
  }
 

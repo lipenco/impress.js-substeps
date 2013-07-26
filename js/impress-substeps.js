@@ -12,7 +12,8 @@ function substepNext() {
   
     var substeps = activeStep.querySelectorAll( ".substep" );
   
-    var hiddenSubsteps = ....;
+    var hiddenSubsteps = activeStep.querySelectorAll( ".hidden" );
+
     
     
     [ a, b, c, d ]
@@ -21,11 +22,10 @@ function substepNext() {
     if (hiddenSubsteps.length == 0) {
       impress().next();
     } else {
-      // pokaż substep
-      // nadaj my klasę 'visible'
-      var substep = ??;
+      for (var i = 0; i < hiddenSubsteps.length; i++)
+      var substep = hiddenSubsteps[i];
       substep.classList.remove("hidden");
-      substep.classList.add('visible')
+      substep.classList.add('visible');
     }
 }
   
