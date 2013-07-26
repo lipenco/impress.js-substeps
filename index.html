@@ -13,7 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
 
-    <link href="css/impress-demo.css" rel="stylesheet" />
+  <link href="css/impress-demo.css" rel="stylesheet" /> 
     <link href="css/substeps.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
@@ -21,10 +21,13 @@
 </head>
 
 
-<body class="impress-not-supported">
-
-<div class="button prev"></div>
-<div class="button next"></div>
+<body>
+        <div id="sticky">
+         <div id="controls">
+            <a href="#"  class="button prev arrows" onClick="api.prev();"><--prev</a> 
+            <a href="#"  class="button next arrows" onClick="api.next();">next--></a> 
+         </div>
+        </div>
 
 
 <div id="impress">
@@ -35,7 +38,7 @@
         <p class="substep"> 2nd substep </p>
         <p class="substep"> 3rd substep </p>
     </div>
-    
+
     <div class="step slide" data-x="2000">
         <q>slide 2</q>
     </div>
@@ -59,7 +62,7 @@
 
 </div>
 
-<script src="js/impress-substeps.js"> </script>
+
 <script src="js/impress.js"> </script>
 <script>  impress().init();</script>
 
