@@ -1,36 +1,26 @@
+
 <!doctype html>
 
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=1024" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>Impress.js Substeps</title>  
+      <link href="css/style.css" rel="stylesheet">
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
-
-
-  <link href="css/impress-demo.css" rel="stylesheet" /> 
-    <link href="css/substeps.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <script src="js/jquery.js"></script>
+         
 </head>
 
-
 <body>
-        <div id="sticky">
-         <div id="controls">
-            <a href="#" class="button prev arrows" onClick="api.prev();"><--prev</a> 
-            <a href="#" class="button next arrows" onClick="api.next();">next--></a> 
-         </div>
-        </div>
-
-
-<div id="impress">
+ <div id="sticky">
+  <div id="controls">
+    <a href="#"  class="arrows" onClick="api.prev();"><--prev</a>
+    <a href="#"  class="arrows animated shake" onClick="api.next();">next--></a>
+  </div>
+ </div>
+ <div id="impress">
 
     <div class="step slide" data-x="1000">
         <q>slide 1</q>
@@ -47,27 +37,24 @@
         <q>slide 3</q>
     </div>
 
-   <div  class="step slide" data-x="3000">
+   <div  class="step slide" data-x="4000">
         <q>slide 4</q>
     </div>
 
-    <div  class="step slide" data-x="4000">
+    <div  class="step slide" data-x="5000">
         <q>slide 5</q>
-    </div>
+    </div>  
+ 
+  </div>
+       
 
-    
-    
-    <div id="overview" class="step" data-x="1000" data-y="0"  data-scale="5">
-    </div>
-
-</div>
-
-
-<script src="js/impress.js"> </script>
-<script>  impress().init();</script>
+        <script src="js/impress.js"></script>
+        <script>impress().init();</script>
+        <script>
+        var api = impress();
+        </script>
+      
 
 </body>
 </html>
-
-
 
