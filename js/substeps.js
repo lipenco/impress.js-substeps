@@ -1,36 +1,33 @@
-var substep = document.querySelector( ".substep" );
-
-for (i ... subteps.length.. ) {
-  substeps[i].classList.add('hidden');
+var substeps = document.querySelectorAll( ".substep" );
+for (i = 0 ; i < substeps.length; i++ ) {
+  substeps[i].classList.add("hidden");
 }
 
-// każdy substep na początku ma klasę 'hidden'
 
 function substepNext() {
   
-    var activeStep = document.querySelector( ".step.active" );
+ var activeStep = document.querySelector( ".step.active" );
   
-    var substeps = activeStep.querySelectorAll( ".substep" );
-  
-    var hiddenSubsteps = ....;
+ var substeps = activeStep.querySelectorAll( ".substep" );
+ 
+ var hiddenSubsteps = activeStep.querySelectorAll( ".substep.hidden" );
     
     
-    [ a, b, c, d ]
-
-    // jeśli nie ma substepów to    
     if (hiddenSubsteps.length == 0) {
       impress().next();
     } else {
-      // pokaż substep
-      // nadaj my klasę 'visible'
-      var substep = ??;
+    for (i = 0 ; i < hiddenSubsteps.length; i++ ) {
+  hiddenSubsteps[i].classList.add("visible");
+//       // show substep
+//       // add class 'visible'
+   var substep = ??;
       substep.classList.remove("hidden");
       substep.classList.add('visible')
-    }
-}
+     }
+ }
   
-function substepPrev() {
+// function substepPrev() {
 
-  impress().prev();
+//   impress().prev();
 
-}
+// }

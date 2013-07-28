@@ -273,10 +273,11 @@ transition:         opacity 1s;
 
 .impress-enabled .step.active { opacity: 1 }
 
-.impress-enabled .substep .hidden {
+.hidden {
   opacity: 0;
 }
 
-.impress-enabled .substep .visible {
+.visible {
   opacity: 1;
 }
+
