@@ -18,7 +18,6 @@ function substepNext() {
     }
 }
 
-
 function substepPrev() {
     var activeStep = document.querySelector(".step.active");
     var substeps = activeStep.querySelectorAll(".substep");
