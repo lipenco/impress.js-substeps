@@ -9,7 +9,7 @@ var activeStep = document.querySelector( ".step.active" );
 var substeps = activeStep.querySelectorAll(".substep");
 var hidden = activeStep.querySelector(".substep.hidden");
   for (i = 0 ; i < substeps.length; i++) {
-      if ( !hidden) {
+     if (!hidden) {
 		     impress().next();
 		     return 0;
 		   } 
@@ -18,23 +18,27 @@ var hidden = activeStep.querySelector(".substep.hidden");
 		   hidden.classList.remove("hidden");
 		   }
 	}
- if (substeps.length == 0) {
-	impress().next();
-	}
+	 if (substeps.length == 0) {
+		impress().next();
+		}
 };
 
 function substepPrev() {
 var activeStep = document.querySelector( ".step.active" );
 var substeps = activeStep.querySelectorAll(".substep");
-var hidden = activeStep.querySelector(".substep.visible");
+var visible = activeStep.querySelector(".substep.visible");
 	for (i = substeps.length; i > 0 ;  i--) {
-		if (substeps.length = 0) {
-		      impress().next();
+		  if (!visible) {
+		     impress().prev();
+		     return 0;
 		   } 
 		else {
-		   hidden.classList.add("hidden");
-		   hidden.classList.remove("visible");
+		   visible.classList.remove("visible");
+		   visible.classList.add("hidden");
 		   }
+		}
+	if (substeps.length == 0) {
+		impress().prev();
 		}
 };
 
