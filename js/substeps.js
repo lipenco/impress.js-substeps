@@ -6,14 +6,16 @@ for (i = 0 ; i < substepsAll.length; i++ ) {
 
 function substepNext() {
 var activeStep = document.querySelector( ".step.active" );
-var substeps = activeStep.querySelectorAll(".substep.hidden");
+var substeps = activeStep.querySelectorAll(".substep");
+var hidden = activeStep.querySelector(".substep.hidden");
+	
 	for (i = 0 ; i < substeps.length; i++) {
 		if (substeps.length = 0) {
 		      impress().next();
 		   } 
 		else {
-		   substeps[i].classList.add("visible");
-		   substeps[i].classList.remove("hidden");
+		   hidden.classList.add("visible");
+		   hidden.classList.remove("hidden");
 		   }
 		}
 };
