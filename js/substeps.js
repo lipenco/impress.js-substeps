@@ -24,14 +24,14 @@ function substepNext() {
 function substepPrev() {
     var activeStep = document.querySelector(".step.active");
     var substeps = activeStep.querySelectorAll(".substep");
-    var visible = activeStep.querySelector(".substep.visible");
+    var visible = activeStep.querySelectorAll(".substep.visible");
 
     if (!visible) {
         impress().prev();
         return 0;
     } else {
-        visible.classList.remove("visible");
-        visible.classList.add("hidden");
+        visible[i].classList.remove("visible");
+        visible[i].classList.add("hidden");
     }
     if (substeps.length == 0) {
         impress().prev();
