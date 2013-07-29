@@ -30,8 +30,8 @@ function substepPrev() {
         impress().prev();
         return 0;
     } else {
-        visible[visible.lenght-1].classList.remove("visible");
-        visible[visible.lenght-1].classList.add("hidden");
+        visible[visible.length-1].classList.remove("visible");
+        visible[visible.length-1].classList.add("hidden");
     }
     if (substeps.length == 0) {
         impress().prev();
