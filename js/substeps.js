@@ -25,15 +25,11 @@ function substepPrev() {
     var activeStep = document.querySelector(".step.active");
     var substeps = activeStep.querySelectorAll(".substep");
     var visible = activeStep.querySelectorAll(".substep.visible");
-
-    if (!visible) {
+    if (visible.length == 0) {
         impress().prev();
-        return 0;
     } else {
         visible[visible.length-1].classList.remove("visible");
         visible[visible.length-1].classList.add("hidden");
     }
-    if (substeps.length == 0) {
-        impress().prev();
-    }
+    
 }
