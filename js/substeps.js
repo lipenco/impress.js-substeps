@@ -8,14 +8,28 @@ function substepNext() {
 var activeStep = document.querySelector( ".step.active" );
 var substeps = activeStep.querySelectorAll(".substep");
 var hidden = activeStep.querySelector(".substep.hidden");
-	
 	for (i = 0 ; i < substeps.length; i++) {
-		if (substeps.length = 0) {
+		if (hidden.length = 0 ) {
 		      impress().next();
 		   } 
 		else {
 		   hidden.classList.add("visible");
 		   hidden.classList.remove("hidden");
+		   }
+		}
+};
+
+function substepPrev() {
+var activeStep = document.querySelector( ".step.active" );
+var substeps = activeStep.querySelectorAll(".substep");
+var hidden = activeStep.querySelector(".substep.visible");
+	for (i = 0; i < substeps.length ;  i++) {
+		if (substeps.length = 0) {
+		      impress().next();
+		   } 
+		else {
+		   hidden.classList.add("hidden");
+		   hidden.classList.remove("visible");
 		   }
 		}
 };
