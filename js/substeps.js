@@ -8,7 +8,7 @@ function substepNext() {
 var activeStep = document.querySelector( ".step.active" );
 var substeps = activeStep.querySelectorAll(".substep");
 var hidden = activeStep.querySelector(".substep.hidden");
-   for (i = 0 ; i < substeps.length; i++) {
+  for (i = 0 ; i < substeps.length; i++) {
       if ( !hidden) {
 		     impress().next();
 		     return 0;
@@ -17,6 +17,9 @@ var hidden = activeStep.querySelector(".substep.hidden");
 		   hidden.classList.add("visible");
 		   hidden.classList.remove("hidden");
 		   }
+	}
+ if (substeps.length == 0) {
+	impress().next();
 	}
 };
 
