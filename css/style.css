@@ -274,7 +274,7 @@ transition:         opacity 1s;
 .impress-enabled .step.active { opacity: 1 }
 
 .hidden {
-  opacity: 0;
+  display:none;
 }
 
 .visible {
