@@ -103,7 +103,6 @@ a {
   position: fixed;
   width: 100%;
   height: 40px;
-  background: black;
   display: block;
   top: 0;
   left: 0;
@@ -278,6 +277,6 @@ transition:         opacity 1s;
 }
 
 .visible {
-  opacity: 1;
+ display: block;
 }
 
