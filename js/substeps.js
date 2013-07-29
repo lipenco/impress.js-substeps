@@ -7,17 +7,14 @@ for (i = 0; i < substepsAll.length; i++) {
 function substepNext() {
     var activeStep = document.querySelector(".step.active");
     var substeps = activeStep.querySelectorAll(".substep");
-    var hidden = activeStep.querySelector(".substep.hidden");
+    var hidden = activeStep.querySelectorAll(".substep.hidden");
 
-    if (!hidden) {
+    if (hidden.length == 0) {
         impress().next();
-        return 0;
+       
     } else {
-        hidden.classList.add("visible");
-        hidden.classList.remove("hidden");
-    }
-    if (substeps.length == 0) {
-        impress().next();
+        hidden[0].classList.add("visible");
+        hidden[0].classList.remove("hidden");
     }
 }
 
