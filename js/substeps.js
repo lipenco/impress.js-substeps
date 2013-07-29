@@ -3,7 +3,6 @@ for (i = 0 ; i < substepsAll.length; i++ ) {
   substepsAll[i].classList.add("hidden");
 };
  
-
 function substepNext() {
 var activeStep = document.querySelector( ".step.active" );
 var substeps = activeStep.querySelectorAll(".substep");
