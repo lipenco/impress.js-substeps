@@ -9,21 +9,22 @@
       <title>Impress.js Substeps</title>  
       <link href="css/style.css" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
+ <!--    // <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  -->
          
 </head>
 
 <body>
  <div id="sticky">
   <div id="controls">
-    <a href="#"  id="arrows" onClick="api.prev();"><--prev</a>
-    <a href="#"  id="arrows" onClick="api.next();">next--></a>
+    <a href="#"  class="arrows" onClick="api.prev();">prev</a>
+    <a href="#"  clsss="arrows" onClick="substepNext();">next</a>
   </div>
  </div>
  <div id="impress">
 
     <div class="step slide" data-x="1000">
         <q>slide 1</q>
+        <p id="demo"></p>
         <p class="substep"> 1th substep </p>
         <p class="substep"> 2nd substep </p>
         <p class="substep"> 3rd substep </p>
