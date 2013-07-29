@@ -17,10 +17,9 @@ var hidden = activeStep.querySelector(".substep.hidden");
 		   hidden.classList.add("visible");
 		   hidden.classList.remove("hidden");
 		   }
-	}
 	 if (substeps.length == 0){
        impress().next();
-		
+	 }	
 }
 
 function substepPrev() {
