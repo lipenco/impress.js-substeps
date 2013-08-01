@@ -142,15 +142,4 @@ transition:         opacity 1s;
 
  .step.active { opacity: 1 }
 
- .future {
-  display:none;
-}
-
- .present {
- display: block;
-}
-
- .past {
-  color: red;
-}
-
+ 

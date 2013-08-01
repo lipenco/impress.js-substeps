@@ -1,86 +1,50 @@
-
-
-/* forcing a width onto all steps */
-.step {
-  position: relative;
-  margin: 20px auto;
-  width: 900px;
-  padding: 40px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
+.substep.future {
+  display:none;
 }
 
-/* 
-  this highlights substeps with '>' 
-*/
-
-
-/* give all steps a light opacity by default */
-.impress-enabled .step {
-  opacity: 0.3;
-  -webkit-transition: opacity 1s;
-  -moz-transition:    opacity 1s;
-  -ms-transition:     opacity 1s;
-  -o-transition:      opacity 1s;
-  transition:         opacity 1s;
+.substep.present {
+ display: block;
+ color:green;
 }
 
-/* bring steps up to full opacity when active */
-.impress-enabled .step.active { 
-  opacity: 1;
+.substep.past {
+  color: red;
 }
 
 
-/*
-  This selector will grab all substeps in a browser that
-  is impress.js compatible, and set their opacity to zero.
-  This also sets up any property change to be transitioned
-  over 1 second
-*/
-.impress-enabled .substep {
-  opacity: 0.2;
-  -webkit-transition: all 1s;
-  -moz-transition:    all 1s;
-  -ms-transition:     all 1s;
-  -o-transition:      all 1s;
-  transition:         all 1s;  
+.substep {
+  -webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;
+  -ms-animation-fill-mode:both;-o-animation-fill-mode:both;
+  animation-fill-mode:both;
+  -webkit-animation-duration:2s;
+  -moz-animation-duration:2s;
+  -ms-animation-duration:2s;
+  -o-animation-duration:2s;
+  animation-duration:2s;
 }
 
-/*
-  if a substep gets set to active it will get an
-  opacity of 1, transitioned over 1 second by the 
-  previous selector 
-*/
-.impress-enabled .substep.active {
-  opacity: 1;
+@-moz-keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
 }
 
-#works-on-divs-too {
-  height: 400px;
+@-o-keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
 }
 
-/*
-  position the hidden divs off screen
-*/
-#works-on-divs-too div {
-  position: absolute;
-  left: -500px;
-  font-size: 1.8rem;
+@keyframes fadeIn {
+  0% {opacity: 0;}  
+  100% {opacity: 1;}
 }
 
-/* 
-  let them transition on screen when active 
-*/
-#works-on-divs-too div.active {
-  position: relative;
-  left: 0;
-  margin-left: 15% 
+.substep.present   {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
-.right {
-  float: right;
-}
+
+
+
