@@ -9,7 +9,8 @@ function substepNext() {
     var substeps = activeStep.querySelectorAll(".substep");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
-    var nextStep = document.querySelectorAll(".future");
+    var past = activeStep.querySelectorAll(".past");
+    var futureStep = document.querySelectorAll(".step.future");
 
     if (future.length == 0) {
         impress().next();
@@ -20,12 +21,7 @@ function substepNext() {
         future[0].classList.remove("future");
         present[0].classList.add("past");
         present[0].classList.remove("present");
-    }
-
-    if (nextStep.length == 0) {
-        substeps.classList.add("future");
-        substeps.classList.remove("past");
-    }      
+    }     
 }
 
 function substepPrev() {
