@@ -9,6 +9,7 @@ function substepNext() {
     var substeps = activeStep.querySelectorAll(".substep");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
+    var nextStep = document.querySelectorAll(".future");
 
     if (future.length == 0) {
         impress().next();
@@ -20,6 +21,11 @@ function substepNext() {
         present[0].classList.add("past");
         present[0].classList.remove("present");
     }
+
+    if (nextStep.length == 0) {
+        substeps.classList.add("future");
+        substeps.classList.remove("past");
+    }      
 }
 
 function substepPrev() {
