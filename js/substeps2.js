@@ -10,6 +10,7 @@ function substepNext() {
     var present = activeStep.querySelectorAll(".present");
 
     if (future.length == 0) {
+        present[0].classList.add("past");
         impress().next();
        
     } else {
