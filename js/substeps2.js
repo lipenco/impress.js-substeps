@@ -5,13 +5,14 @@ for (i = 0; i < substepsAll.length; i++) {
 
 function substepNext() {
     var activeStep = document.querySelector(".step.active");
+    var substep = activeStep.querySelector(".substep");
     var substeps = activeStep.querySelectorAll(".substep");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
 
     if (future.length == 0) {
-        present[0].classList.add("past");
         impress().next();
+        present[present.length-1].classList.add("past");
        
     } else {
         future[0].classList.add("present");
