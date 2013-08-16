@@ -19,8 +19,7 @@ function substepNext() {
     } else {
         future[0].classList.add("present");
         future[0].classList.remove("future");
-        if {
-            present.length > 0) {
+        if (present.length > 0) {
             present[0].classList.add("past");
             present[0].classList.remove("present");
         }
