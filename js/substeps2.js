@@ -1,18 +1,15 @@
 var substepsAll = document.querySelectorAll(".substep");
-for (i = 0; i < substepsAll.length; i++) {
+for (var i = 0; i < substepsAll.length; i++) {
     substepsAll[i].classList.add("future");
 }
 
 function substepNext() {
     var activeStep = document.querySelector(".step.active");
-    var substep = activeStep.querySelector(".substep");
-    var substeps = activeStep.querySelectorAll(".substep");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
-    var past = activeStep.querySelectorAll(".past");
-    var futureStep = document.querySelectorAll(".step.future");
+  
 
-    if (future.length == 0) {
+    if (future.length === 0) {
         impress().next();
         present[present.length - 1].classList.add("past");
 
@@ -39,7 +36,7 @@ document.addEventListener("keyup", function (event) {
         case 33: // pg up
         case 37: // left
         case 38: // up
-            substepPrev()
+            substepPrev();
             break;
         case 9: // tab
         case 32: // space
