@@ -4,7 +4,7 @@ function automatedPresentationWithSubsteps() {
         if (!duration) {
             duration = 3000;
         }
-        var timing = setTimeout(function () {
+        var timing = setTimeout(function() {
             substepNext();
         }, duration);
     }
