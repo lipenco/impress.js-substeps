@@ -23,12 +23,12 @@
 
     <div class="step slide" data-x="1000">
         <q>Slide In Part 1</q>
-        <p class="substep fadeIn"> Substep fadeIn </p>
-        <p class="substep fadeInRight"> Substep fadeInRight</p>
-        <p class="substep fadeInLeft"> Substep  fadeInLeft</p>
-        <p class="substep rollIn"> Substep rollIn </p>
-        <p class="substep flipInX"> Substep flipInX </p>
-        <p class="substep flipInY"> Substep flipInY</p> 
+        <p class="substep fadeIn" data-duration="1000"> Substep fadeIn </p>
+        <p class="substep fadeInRight" data-duration="1000"> Substep fadeInRight</p>
+        <p class="substep fadeInLeft" data-duration="1000"> Substep  fadeInLeft</p>
+        <p class="substep rollIn" data-duration="1000"> Substep rollIn </p>
+        <p class="substep flipInX" data-duration="1000"> Substep flipInX </p>
+        <p class="substep flipInY" data-duration="1000"> Substep flipInY</p> 
          
         
     </div>
@@ -73,10 +73,12 @@
     </div>  
  
   </div>
-       
-         <script src="js/substeps2.js"></script>
+        
+        
+        <script src="js/substeps2.js"></script> 
+        <script src="js/automatedpresentation.js"></script>
         <script src="js/impress.js"></script>
-        <script> impress().init();</script>
+        <script> automatedPresentationWithSubsteps(); impress().init();</script>
         <script>
         var api = impress();
         </script>
