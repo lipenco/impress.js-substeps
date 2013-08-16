@@ -19,14 +19,19 @@ function substepNext() {
     } else {
         future[0].classList.add("present");
         future[0].classList.remove("future");
-        present[0].classList.add("past");
-        present[0].classList.remove("present");
-    }     
+        if( present.length > 0 ) {
+            present[0].classList.add("past");
+            present[0].classList.remove("present");
+        }
+        var event = document.createEvent("CustomEvent");
+        event.initCustomEvent("impress:substep:enter", true, true);
+        future[0].dispatchEvent(event);
+    }
 }
 
 function substepPrev() {
-        impress().prev();
-    } 
+    impress().prev();
+} 
 
 document.addEventListener("keyup", function ( event ) {
             if ( event.keyCode === 9 || ( event.keyCode >= 32 && event.keyCode <= 34 ) || (event.keyCode >= 37 && event.keyCode <= 40) ) {

@@ -1,18 +1,14 @@
-
 function automatedPresentationWithSubsteps() {
-    var elements = document.querySelector(".substep");
-// for (var index = 0; index < elements.length; index++) {
-     document.addEventListener("impress:stepenter", function () {
-        var duration = elements.dataset.duration;
+    var delayedNext = function (e) {
+        var duration = e.target.dataset.duration;
         if (!duration) {
             duration = 3000;
-        } 
-        var timing = setInterval(function() {
-        substepNext()
+        }
+        var timing = setTimeout(function() {
+            substepNext();
         }, duration);
-        }, false);
-   
+    }
+
+    document.addEventListener("impress:stepenter", delayedNext, false);
+    document.addEventListener("impress:substep:enter", delayedNext, false);
 }
-
-
-
