@@ -3,14 +3,23 @@ for (var i = 0; i < substepsAll.length; i++) {
     substepsAll[i].classList.add("future");
 }
 
+// var steps = document.querySelectorAll(".step");
+// var stepsf = document.querySelectorAll(".step .future");
+// var stepsp = document.querySelectorAll(".step .past");
+// if (stepsf.length === 0) {
+//     for (var i = 0; i < stepp.length; i++) {
+//     substepsAll[i].classList.remove("past");
+//     substepsAll[i].classList.add("future");
+//    }
+// }
+
 function substepNext() {
     var activeStep = document.querySelector(".step.active");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
-  
 
     if (future.length === 0) {
-        impress().next();
+        impress().next(); 
         present[present.length - 1].classList.add("past");
 
     } else {
@@ -24,6 +33,7 @@ function substepNext() {
         event.initCustomEvent("impress:substep:enter", true, true);
         future[0].dispatchEvent(event);
     }
+   
 }
 
 function substepPrev() {
