@@ -17,10 +17,16 @@ function substepNext() {
     var activeStep = document.querySelector(".step.active");
     var future = activeStep.querySelectorAll(".future");
     var present = activeStep.querySelectorAll(".present");
+    var past = activeStep.querySelectorAll(".past")
 
     if (future.length === 0) {
         impress().next(); 
-        present[present.length - 1].classList.add("past");
+        present[0].classList.add("future");
+        present[0].classList.remove("present");
+         for (var i = 0; i < past.length; i++) {
+        past[i].classList.add("future");
+        past[i].classList.remove("past"); 
+       }
 
     } else {
         future[0].classList.add("present");
